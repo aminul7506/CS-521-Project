@@ -1,0 +1,7 @@
+numpy==1.26.0
+pandas
+scikit-learn
+scipy
+torch==2.0.1
+tqdm
+tensorboardx
