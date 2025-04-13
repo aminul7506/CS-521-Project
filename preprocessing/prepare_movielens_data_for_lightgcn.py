@@ -76,5 +76,6 @@ def split_train_valid_test():
 
 
 if __name__ == '__main__':
+    random.seed(5000)
     extract_user_item_interactions_from_ratings()
     split_train_valid_test()
