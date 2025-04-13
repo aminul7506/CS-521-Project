@@ -26,6 +26,5 @@ lightgcn-env
 
 data/Epinions/
 data/Movielens/model_state_dict_lgn.pth
-data/Movielens/results_lgn.txt
 data/Movielens/s_pre_adj_mat.npz
 imgs/
