@@ -5,7 +5,7 @@
 We use LightGCN for our base model for recommendation. We use the original code of LightGCN and
 perform necessary modification for our purpose.
 
->SIGIR 2020. Xiangnan He, Kuan Deng ,Xiang Wang, Yan Li, Yongdong Zhang, Meng Wang(2020). LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation, [Paper in arXiv](https://arxiv.org/abs/2002.02126).
+>SIGIR 2020. Xiangnan He, Kuan Deng ,Xiang Wang, Yan Li, Yongdong Zhang, Meng Wang(2020). LightGCN: Simplifying and Powering Graph Convolution Network for Recommendation, [Paper](https://dl.acm.org/doi/pdf/10.1145/3397271.3401063?casa_token=7ZAy9cglsYIAAAAA:1_Ed8H-_fbvkx5GpcyFyDh4khNChPmBXCehe5uSvu3pAjdKI3XxKtRtX07rrwqOo-1vwImHK8acr).
 
 ### Enviroment Requirement
 
@@ -26,12 +26,10 @@ The original dataset descriptions of the Movielens-100k can be found in data/Mov
 
 ### An example to run a 3-layer LightGCN with Movielens dataset.
 
-* command
-
 ```cd code && ./run.sh Movielens lgn 3 1000```
 
 
-## Results for LightGCN with Movielens dataset with layer 3
+### Results for LightGCN with Movielens dataset with layer 3
 *all metrics is under top-20*
 
 (*for seed=2020*)
