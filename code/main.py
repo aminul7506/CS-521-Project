@@ -39,7 +39,7 @@ else:
     world.cprint("not enable tensorflowboard")
 
 try:
-    budget = 1
+    budget = 5
     best_result_valid_upto_r20 = 0.0
     best_results_valid = {}
     results_test = {}
@@ -50,7 +50,7 @@ try:
             results_valid = Procedure.Valid(dataset, Recmodel, epoch, w, world.config['multicore'])
             print("------ Current Valid Results -----")
             print(results_valid)
-            if epoch < 1:
+            if epoch < 50:
                 continue
             recall_upto20_valid = (results_valid['recall'][5] + results_valid['recall'][4] +
                                    results_valid['recall'][3] + results_valid['recall'][2])
@@ -61,7 +61,8 @@ try:
                 print("------ Updating Best Results -----")
                 print(best_results_valid)
 
-                results_test = Procedure.Test(dataset, Recmodel, epoch, w, world.config['multicore'])
+                results_test = Procedure.Test(dataset, Recmodel, epoch, w, world.config['multicore'],
+                                              dataset_name=world.dataset)
                 print("------ Current Test Results -----")
                 print(results_test)
             else:

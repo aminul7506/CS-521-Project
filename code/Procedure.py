@@ -70,9 +70,24 @@ def test_one_batch(X):
     return {'recall':np.array(recall), 
             'precision':np.array(pre), 
             'ndcg':np.array(ndcg)}
-        
-            
-def Test(dataset, Recmodel, epoch, w=None, multicore=0):
+
+
+def store_top_k_predicted_items(users_list, rating_list, dataset_name):
+    with open("../data/" + dataset_name + "/topk_predict.txt", "w") as f:
+        users_batches = users_list.copy()
+        top_k_items_batches = rating_list.copy()
+        current_batch = 0
+        for users_one_batch in users_batches:
+            current_index = 0
+            for user in users_one_batch:
+                top_k_item_for_this_user = top_k_items_batches[current_batch][current_index].tolist()
+                line = f"{user} " + " ".join(str(i) for i in top_k_item_for_this_user) + "\n"
+                f.write(line)
+                current_index += 1
+            current_batch += 1
+
+
+def Test(dataset, Recmodel, epoch, w=None, multicore=0, dataset_name=None):
     u_batch_size = world.config['test_u_batch_size']
     dataset: utils.BasicDataset
     testDict: dict = dataset.testDict
@@ -150,6 +165,8 @@ def Test(dataset, Recmodel, epoch, w=None, multicore=0):
         if multicore == 1:
             pool.close()
         # print(results)
+        if dataset_name is not None:
+            store_top_k_predicted_items(users_list, rating_list, dataset_name)
         return results
 
 
