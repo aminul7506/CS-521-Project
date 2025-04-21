@@ -42,6 +42,7 @@ def calculate_ndcg_at_k(true_items, predicted_items, k):
 if __name__ == '__main__':
     true_lists = read_file_for_ranked_items("../data/Movielens/test.txt")
     llm_predicted_lists = read_file_for_ranked_items("../data/Movielens/topk_predict_llm.txt")
+    # llm_predicted_lists = read_file_for_ranked_items("../data/Movielens/topk_predict_llm_with_randomized_interactions.txt")
 
     results = {}
     ndcgs = []
