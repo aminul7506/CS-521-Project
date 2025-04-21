@@ -43,6 +43,7 @@ if __name__ == '__main__':
     true_lists = read_file_for_ranked_items("../data/Movielens/test.txt")
     llm_predicted_lists = read_file_for_ranked_items("../data/Movielens/topk_predict_llm.txt")
     # llm_predicted_lists = read_file_for_ranked_items("../data/Movielens/topk_predict_llm_with_randomized_interactions.txt")
+    # llm_predicted_lists = read_file_for_ranked_items("../data/Movielens/topk_predict_llm_with_reduced_position_bias.txt")
 
     results = {}
     ndcgs = []
