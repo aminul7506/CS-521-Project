@@ -40,5 +40,16 @@ The original dataset descriptions of the Movielens-100k can be found in data/Mov
 | ----------- | ------------------------- |---------|-----------|
 | **layer=3** | 0.41340                | 0.46346 | 0.29804   |
 
-### LLM prompting
-
+### Generate top-k with LLM prompt
+1. To generate the top-k predicted items for each user using an LLM, run the following script: 
+```python
+python code/llm_prompting_predict_top-k.py
+```
+2. To generate the top-k predicted items with randomized interaction history for each user using an LLM, run the following script: 
+```python
+python code/llm_prompting_predict_top-k_randomized_history.py
+```
+3. To generate the top-k predicted items with reduced postion bias for each user using an LLM, run the following script: 
+```python
+python code/llm_prompting_predict_top-k_reduce_position_bias.py
+```
