@@ -40,3 +40,5 @@ The original dataset descriptions of the Movielens-100k can be found in data/Mov
 | ----------- | ------------------------- |---------|-----------|
 | **layer=3** | 0.41340                | 0.46346 | 0.29804   |
 
+### LLM prompting
+
