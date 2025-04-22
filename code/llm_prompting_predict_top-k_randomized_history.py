@@ -1,6 +1,6 @@
 import numpy as np
 import pandas as pd
-%matplotlib inline
+# %matplotlib inline
 import matplotlib.pyplot as plt
 import seaborn as sns
 import nltk
@@ -17,7 +17,6 @@ from openai import OpenAI
 import time
 import random
 from tqdm import tqdm
-import pandas as pd
 np.random.seed(4200)
 
 dataset_name = "Movielens"

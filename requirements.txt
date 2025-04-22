@@ -6,3 +6,8 @@ torch==2.0.1
 tqdm
 tensorboardx
 matplotlib
+openai
+nltk
+Ipython
+seaborn
+matplotlib-inline

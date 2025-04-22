@@ -53,3 +53,12 @@ python code/llm_prompting_predict_top-k_randomized_history.py
 ```python
 python code/llm_prompting_predict_top-k_reduce_position_bias.py
 ```
+
+Finally, we calculate the NDCG scores between the ground truth and the top-k items provided by the LLM.
+
+Our results are given below. GPT-4o refers to ranking scores provided by RQ1, GPT-4o (Rand) refers to ranking scores provided by RQ2, GPT-4o (Position) refers to ranking scores provided by RQ3.
+
+
+<img src="data/Movielens/RQ1.png" alt="Model Architecture" width="400" height="300"/>
+<img src="data/Movielens/RQ2.png" alt="Model Architecture" width="400" height="300"/>
+<img src="data/Movielens/RQ3.png" alt="Model Architecture" width="400" height="300"/>
